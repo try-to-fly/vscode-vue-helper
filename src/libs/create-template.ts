@@ -30,7 +30,8 @@ export default {
   name: '${name}'
 }
 </script>
-<style lang="scss" scoped></style>`
+<style lang="scss" scoped></style>
+`
     fs.writeFileSync(filePath, str, 'utf8')
   } catch (error) {
     console.error(error)
