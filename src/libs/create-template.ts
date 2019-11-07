@@ -26,13 +26,16 @@ export default async function(fsPath: string) {
       pascalCase: true
     })
     const str = `<template>
-  <div class="${name}-wrap"></div>
+  <div class="${name.toLowerCase()}-wrap"></div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+
+@Component({
   name: '${componentName}'
-}
+})
+export default class extends Vue {}
 </script>
 <style lang="scss" scoped></style>
 `;
